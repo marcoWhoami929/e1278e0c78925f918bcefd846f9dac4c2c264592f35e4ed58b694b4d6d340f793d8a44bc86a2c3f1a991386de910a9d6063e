@@ -4,7 +4,7 @@ class Acciones
 
     private $nombreUsuario;
     private $passwordUsuario;
-    private $table = "Carrera";
+    private $table = "usuarios";
 
     function __construct($nombreUsuario = null, $passwordUsuario = null)
     {
@@ -15,5 +15,10 @@ class Acciones
     function selectAllUsers()
     {
         return "SELECT * FROM $this->table";
+    }
+    function loginUser(){
+
+        return "SELECT * FROM $this->table where nombreUsuario = '$this->nombreUsuario' and password = '$this->passwordUsuario'";
+
     }
 }
