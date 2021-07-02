@@ -14,30 +14,28 @@ $db = new ConnectDB();
 
 $db->connect();
 
-switch ($metodo) {  
-    
+switch ($metodo) {
+
     case "POST":
 
         $nombreUsuario = $_POST["user"];
 
         $passwordUsuario = $_POST["password"];
 
-        $login = new Acciones($nombreUsuario,$passwordUsuario);
+        $login = new Acciones(0, 0, $nombreUsuario, 0, $passwordUsuario, 0);
 
         $result = $db->select($login->loginUser());
-
+        var_dump($result);
         $total = count($result);
- 
-		if ($total > 0) {
 
-			echo "login_ok";
+        if ($total > 0) {
 
-		}else{
+            echo "login_ok";
+        } else {
 
-			echo "error_login";
+            echo "error_login";
+        }
 
-		}
-        
         break;
 
 
@@ -48,5 +46,3 @@ switch ($metodo) {
 
         break;
 }
-
-?>
