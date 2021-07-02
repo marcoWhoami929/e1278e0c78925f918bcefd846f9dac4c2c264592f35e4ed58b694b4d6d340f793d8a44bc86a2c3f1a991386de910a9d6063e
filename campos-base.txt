@@ -1,0 +1,35 @@
+REGISTRO USUARIO
+*cmpNombreCompleto
+*cmpEmail
+*cmpUsername
+*cmpPassword
+
+MEDICO
+cmpNombre
+cmpApellidoP
+cmpApellidoM
+cmpIdConsultorio
+cmpIdArea
+
+CITA
+cmpNombreCita
+cmpIdPaciente
+cmpIdMedico
+cmpIdConsultorio
+cmpIdTipoCita
+cmpNotas
+cmpFechaCita
+cmpHoraCita
+
+REGISTRO PACIENTE
+cmpNombreCompleto
+cmpDireccion
+cmpCiudad
+cmpTelefono
+cmpCelular
+cmpFechaNacimiento
+cmpOcupacion
+cmpEdad
+cmpNombrePadre
+cmpNombreMadre
+
