@@ -23,7 +23,7 @@ class Acciones
 
     function selectAllUsers()
     {
-        return "SELECT * FROM $this->table";
+        return "SELECT * FROM $this->table order by id asc";
     }
     function loginUser()
     {

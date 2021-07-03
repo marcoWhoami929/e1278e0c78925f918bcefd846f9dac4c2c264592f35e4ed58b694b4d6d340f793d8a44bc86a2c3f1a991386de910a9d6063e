@@ -37,7 +37,7 @@ class Medicos
     function selectMedicos()
     {
 
-        return "SELECT med.*,con.nombreConsultorio FROM $this->table as med inner join consultorios as con ON med.idConsultorio = con.id";
+        return "SELECT med.*,con.nombreConsultorio FROM $this->table as med inner join consultorios as con ON med.idConsultorio = con.id order by med.id asc";
     }
     function selectAreas()
     {

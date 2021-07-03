@@ -37,10 +37,10 @@ class Pacientes
     function selectPacientes()
     {
 
-        return "SELECT * FROM $this->pacientes";
+        return "SELECT * FROM $this->pacientes order by id asc";
     }
     function registrarPaciente()
     {
-        return "INSERT INTO $this->table values ('$this->id','$this->nombreCompleto','$this->direccion','$this->ciudad','$this->telefono','$this->celular','$this->fechaNacimiento','$this->ocupacion','$this->edad','$this->nombreCompletoPadre','$this->nombreCompletoMadre','$this->fechaRegistro')";
+        return "INSERT INTO $this->pacientes values ('$this->id','$this->nombreCompleto','$this->direccion','$this->ciudad','$this->telefono','$this->celular','$this->fechaNacimiento','$this->ocupacion','$this->edad','$this->nombreCompletoPadre','$this->nombreCompletoMadre','$this->fechaRegistro')";
     }
 }
